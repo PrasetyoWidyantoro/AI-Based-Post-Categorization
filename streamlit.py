@@ -62,6 +62,15 @@ stop_words = set(stopwords.words('english'))
 # Streamlit UI
 st.title("Craigslist Post Category Prediction")
 
+# Description
+st.write("Craigslist Post Category Prediction aims to predict the category of each post published on the Craigslist classified ads platform.")
+
+# Instructions for uploading JSON file
+st.write("If you want to try the 'Upload JSON File' feature, you can directly download the sample JSON file, please click the link below:")
+# Short link to the JSON file
+json_file_link = "[Click here to download the JSON file](https://drive.google.com/uc?id=1KgYBe5XTwgMLQJjOP-jYfK5IzgJj-Xbv)"
+st.markdown(json_file_link)
+
 # Input method selection
 input_method = st.radio("Select Input Method", ["Form Input", "Upload JSON File"])
 
