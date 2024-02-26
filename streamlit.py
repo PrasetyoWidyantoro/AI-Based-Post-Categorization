@@ -8,6 +8,8 @@ from torch.autograd import Variable
 from nltk.tokenize import word_tokenize
 import re
 from nltk.corpus import stopwords
+import nltk
+nltk.download('stopwords')
 
 # Define preprocess_text function
 def preprocess_text(df):
