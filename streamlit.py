@@ -10,6 +10,7 @@ import re
 from nltk.corpus import stopwords
 import nltk
 nltk.download('stopwords')
+nltk.download('punkt')
 
 # Define preprocess_text function
 def preprocess_text(df):
