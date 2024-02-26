@@ -71,6 +71,17 @@ st.write("If you want to try the 'Upload JSON File' feature, you can directly do
 json_file_link = "[Click here to download the JSON file](https://drive.google.com/uc?id=1KgYBe5XTwgMLQJjOP-jYfK5IzgJj-Xbv)"
 st.markdown(json_file_link)
 
+# Function to get download link
+def get_download_link(results):
+    output_filename = "prediction_results.json"
+    output_path = os.path.abspath(output_filename)
+    
+    with open(output_path, "w") as output_file:
+        json.dump(results, output_file)
+
+    download_link = f'<a href="{output_path}" download>Click here to download Prediction Results JSON</a>'
+    return download_link
+
 # Input method selection
 input_method = st.radio("Select Input Method", ["Form Input", "Upload JSON File"])
 
